@@ -66,6 +66,13 @@ const popupHtml = `
 `;
 
 document.addEventListener('DOMContentLoaded', (event) => {
+  if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  ) {
+    return;
+  }
   document.body.insertAdjacentHTML('beforeend', popupHtml);
   var muted_event = document.getElementById('video-overlay');
   var close_event = document.getElementById('video-close');
@@ -73,6 +80,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     var video_obj = document.getElementById('video-intro');
     var btn_muted = document.getElementById('video-muted');
     if (video_obj) {
+      if (video_obj.paused) video_obj.play();
       video_obj.muted = !video_obj.muted;
       //console.log(video_obj, video_obj.muted);
       if (!video_obj.muted) {
