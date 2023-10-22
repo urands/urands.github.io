@@ -1,0 +1,119 @@
+body {
+    padding-top: 20px;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.web-intro {
+    /* background-color: blue; */
+    position: fixed;
+    text-align: center;
+    bottom: 30px;
+    right: 30px; 
+    /* left: 125px; */
+    /* overflow: hidden; */
+   
+}
+
+video#video-intro {
+    width: 200px;
+    height: 200px;
+    object-fit: fill;
+    border-radius: 200px;
+}
+
+video::-webkit-media-controls {
+    display: none;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.video-overlay:hover #video-muted{
+    transform: scale(1.3);
+}
+
+.video-overlay:hover #video-close:hover #video-muted{
+    transform: none;
+}
+
+
+#video-close:hover{
+    transform: scale(1.3);
+
+}
+
+#video-muted{
+
+}
+
+#video-muted, #video-close{
+    transition-timing-function: linear;
+    transition: transform 0.25s;
+}
+
+.video-close{
+    align-self: space-between;
+    justify-content: end;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+.video-center svg{
+    padding-bottom: 10px;;
+}
+
+
+
+
+.play,
+.pause {
+    position: absolute;
+    display: block;
+    color: #fff;
+    font-size: 5em;
+    line-height: 5em;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    transition: 0.3s all ease-in-out;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.web-cam:hover .play,
+.web-cam:hover .pause {
+    color: #ddd;
+}
+
+.web-cam:hover .pause {
+    opacity: 0.2;
+}
+
+.pause {
+    opacity: 0;
+}
+
+.pause:hover {
+    opacity: 1 !important;
+}
+
+.play:hover,
+.pause:hover {
+    font-size: 8em;
+}
