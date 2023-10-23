@@ -1,63 +1,23 @@
-
 .web-intro {
+    position: relative;
+}
+
+#video-intro-container {
     position: fixed;
-    text-align: center;
-    bottom: 30px;
-    right: 30px; 
+    bottom: 110px;
+    right: 30px;
+    z-index: 10000;
 }
 
 video#video-intro {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     object-fit: fill;
     border-radius: 200px;
+    transition: transform 0.25s, width 0.25s, height 0.25s;
 }
 
-video::-webkit-media-controls {
-    display: none;
-}
-
-.video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: end;
-}
-
-.video-overlay:hover #video-muted{
-    transform: scale(1.3);
-}
-
-.video-overlay:hover #video-close:hover #video-muted{
-    transform: none;
-}
-
-
-#video-close:hover{
-    transform: scale(1.3);
-}
-
-#video-muted, #video-close{
-    transition-timing-function: linear;
-    transition: transform 0.25s;
-}
-
-.video-close{
-    align-self: space-between;
-    justify-content: end;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.video-center svg{
-    padding-bottom: 10px;;
+video#video-intro:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
