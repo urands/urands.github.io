@@ -1,12 +1,13 @@
 .web-intro {
     position: relative;
+    z-index: 10001;
 }
 
 #video-intro-container {
     position: fixed;
     bottom: 130px;
     right: 13px;
-    z-index: 2000;
+    z-index: 10001;
 }
 
 video#video-intro {
