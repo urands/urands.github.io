@@ -1,16 +1,18 @@
 .web-intro {
     position: relative;
-    z-index: 10001;
+    z-index: 100001;
 }
 
 #video-intro-container {
     position: fixed;
     bottom: 130px;
     right: 13px;
-    z-index: 10001;
+    z-index: 100001;
+    opacity: 0.99;
 }
 
 video#video-intro {
+    z-index: 100001;
     width: 100px;
     height: 100px;
     object-fit: fill;
