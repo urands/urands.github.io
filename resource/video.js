@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   muted_event.addEventListener('click', (ev) => {
     var video_obj = document.getElementById('video-intro');
     if (video_obj) {
+      video_obj.currentTime = 0;
       if (video_obj.paused) video_obj.play();
       video_obj.muted = !video_obj.muted;
       if (!video_obj.muted) {
